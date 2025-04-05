@@ -1664,7 +1664,6 @@ def main():
     for col in boolean_columns:
         df[col] = df[col].str.lower() == 'true'
     print(df.columns)
-    exit()
     # Get unique teams
     teams = df['selectTeam'].unique()
     
