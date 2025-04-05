@@ -346,6 +346,7 @@ def create_team_page(team_data, team_number, team_name, rankings):
     
     # remove the scouter scouterInitials column
     team_data = team_data.drop(columns=['scouterInitials'])
+    team_data = team_data.drop(columns=['comment'])
     # Create raw data table
     raw_data_table = team_data.to_html(
         index=False,
