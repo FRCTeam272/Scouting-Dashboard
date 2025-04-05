@@ -956,11 +956,6 @@ def create_team_page(team_data, team_number, team_name, rankings):
                 {schedule_html}
             </div>
 
-            <div class="comments">
-                <h2>Match Comments</h2>
-                {''.join([f'<div class="comment"><strong>Match {row["matchNumber"]}:</strong> {row["comment"]}</div>' for _, row in team_data.iterrows() if pd.notna(row['comment'])])}
-            </div>
-
             <button id="toggleButton" class="toggle-button" onclick="toggleRawData()">Show Raw Data</button>
             <div id="rawDataContainer" class="raw-data-container">
                 <h2>Raw Match Data</h2>
